@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export default function Client() {
+  const { t } = useTranslation();
+
   return (
     <section
       className="relative w-full min-h-screen bg-cover bg-center flex items-center justify-center px-6"
@@ -16,9 +20,11 @@ export default function Client() {
           data-aos="fade-down"
         >
           <h2 className="text-2xl sm:text-5xl font-bold uppercase mb-4">
-            KLIEN KAMI
+            {t("clientSection.header.title")}
           </h2>
-          <p className="text-sm sm:text-lg uppercase">HANEL UNIVERSAL ASIA</p>
+          <p className="text-sm sm:text-lg uppercase">
+            {t("clientSection.header.subtitle")}
+          </p>
         </div>
 
         {/* Logo Klien (Berjejer Horizontal) */}

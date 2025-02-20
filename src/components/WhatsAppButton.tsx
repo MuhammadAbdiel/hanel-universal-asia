@@ -1,6 +1,8 @@
 import { MessageCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function WhatsAppButton() {
+  const { t } = useTranslation();
   const whatsappNumber = "+6289515499962";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
@@ -13,7 +15,7 @@ export default function WhatsAppButton() {
     >
       {/* Label "Contact Us" */}
       <span className="bg-white text-gray-700 text-sm px-3 py-1 rounded-full shadow-md">
-        Contact Us
+        {t("whatsappButton.contact")}
       </span>
 
       {/* Ikon WhatsApp */}

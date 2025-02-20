@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Globe, Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -10,6 +13,11 @@ export default function Navbar() {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
       setIsOpen(false);
     }
+  };
+
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+    setIsLangOpen(false);
   };
 
   return (
@@ -21,15 +29,53 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex space-x-6">
-            <button onClick={() => scrollToSection("hero")}>Beranda</button>
-            <button onClick={() => scrollToSection("about")}>
-              Tentang Kami
+            <button onClick={() => scrollToSection("hero")}>
+              {t("navbar.home")}
             </button>
-            <button onClick={() => scrollToSection("visi")}>Visi & Misi</button>
-            <button onClick={() => scrollToSection("values")}>Values</button>
-            <button onClick={() => scrollToSection("services")}>Layanan</button>
-            <button onClick={() => scrollToSection("why")}>Mengapa</button>
-            <button onClick={() => scrollToSection("client")}>Klien</button>
+            <button onClick={() => scrollToSection("about")}>
+              {t("navbar.about")}
+            </button>
+            <button onClick={() => scrollToSection("visi")}>
+              {t("navbar.vision")}
+            </button>
+            <button onClick={() => scrollToSection("values")}>
+              {t("navbar.values")}
+            </button>
+            <button onClick={() => scrollToSection("services")}>
+              {t("navbar.services")}
+            </button>
+            <button onClick={() => scrollToSection("why")}>
+              {t("navbar.why")}
+            </button>
+            <button onClick={() => scrollToSection("client")}>
+              {t("navbar.clients")}
+            </button>
+            <div className="relative">
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center space-x-1 hover:text-gray-300 focus:outline-none"
+              >
+                <Globe size={20} />
+                <span className="uppercase">{i18n.language}</span>
+                <ChevronDown size={16} />
+              </button>
+              {isLangOpen && (
+                <div className="absolute right-0 mt-2 w-32 bg-white text-black rounded-md shadow-lg z-50">
+                  <button
+                    onClick={() => changeLanguage("en")}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                  >
+                    English
+                  </button>
+                  <button
+                    onClick={() => changeLanguage("id")}
+                    className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                  >
+                    Indonesian
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="md:hidden">
@@ -49,44 +95,71 @@ export default function Navbar() {
             onClick={() => scrollToSection("hero")}
             className="block py-3 px-6"
           >
-            Home
+            {t("navbar.home")}
           </button>
           <button
             onClick={() => scrollToSection("about")}
             className="block py-3 px-6"
           >
-            Tentang Kami
+            {t("navbar.about")}
           </button>
           <button
             onClick={() => scrollToSection("visi")}
             className="block py-3 px-6"
           >
-            Visi & Misi
+            {t("navbar.vision")}
           </button>
           <button
             onClick={() => scrollToSection("values")}
             className="block py-3 px-6"
           >
-            Values
+            {t("navbar.values")}
           </button>
           <button
             onClick={() => scrollToSection("services")}
             className="block py-3 px-6"
           >
-            Layanan
+            {t("navbar.services")}
           </button>
           <button
             onClick={() => scrollToSection("why")}
             className="block py-3 px-6"
           >
-            Mengapa
+            {t("navbar.why")}
           </button>
           <button
             onClick={() => scrollToSection("client")}
             className="block py-3 px-6"
           >
-            Klien
+            {t("navbar.clients")}
           </button>
+
+          <div className="relative">
+            <button
+              onClick={() => setIsLangOpen(!isLangOpen)}
+              className="flex items-center space-x-1 w-full px-6 py-3 hover:bg-gray-700 focus:outline-none"
+            >
+              <Globe size={20} />
+              <span className="uppercase">{i18n.language}</span>
+              <ChevronDown size={16} />
+            </button>
+            {isLangOpen && (
+              <div className="w-full bg-white text-black rounded-md shadow-lg z-50">
+                <button
+                  onClick={() => changeLanguage("en")}
+                  className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                >
+                  English
+                </button>
+                <button
+                  onClick={() => changeLanguage("id")}
+                  className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                >
+                  Indonesian
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       )}
     </nav>

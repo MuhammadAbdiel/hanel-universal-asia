@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export default function Values() {
+  const { t } = useTranslation();
+
   return (
     <section
       className="relative w-full min-h-screen bg-no-repeat bg-contain bg-left"
@@ -15,10 +19,10 @@ export default function Values() {
             data-aos="fade-down"
           >
             <h2 className="text-2xl sm:text-5xl font-bold text-white uppercase mb-4">
-              VALUES KAMI
+              {t("values.header.title")}
             </h2>
             <p className="text-white text-sm sm:text-lg uppercase">
-              HANEL UNIVERSAL ASIA
+              {t("values.header.subtitle")}
             </p>
           </div>
 
@@ -31,11 +35,10 @@ export default function Values() {
               </div>
               <div>
                 <h3 className="font-bold text-[#254CD5] text-xl uppercase">
-                  Honesty
+                  {t("values.items.honesty.title")}
                 </h3>
                 <p className="text-gray-700 text-lg">
-                  Kami berkomitmen untuk selalu memberikan informasi yang
-                  transparan dan solusi teknologi yang dapat dipercaya.
+                  {t("values.items.honesty.description")}
                 </p>
               </div>
             </div>
@@ -47,11 +50,10 @@ export default function Values() {
               </div>
               <div>
                 <h3 className="font-bold text-[#254CD5] text-xl uppercase">
-                  Agility
+                  {t("values.items.agility.title")}
                 </h3>
                 <p className="text-gray-700 text-lg">
-                  Kami bergerak cepat untuk beradaptasi dengan kebutuhan klien
-                  dan tren teknologi terbaru.
+                  {t("values.items.agility.description")}
                 </p>
               </div>
             </div>
@@ -63,11 +65,10 @@ export default function Values() {
               </div>
               <div>
                 <h3 className="font-bold text-[#254CD5] text-xl uppercase">
-                  Novelty
+                  {t("values.items.novelty.title")}
                 </h3>
                 <p className="text-gray-700 text-lg">
-                  Kami mengedepankan pemikiran kreatif untuk menciptakan solusi
-                  digital yang segar, unik, dan berdampak positif.
+                  {t("values.items.novelty.description")}
                 </p>
               </div>
             </div>
@@ -79,11 +80,10 @@ export default function Values() {
               </div>
               <div>
                 <h3 className="font-bold text-[#254CD5] text-xl uppercase">
-                  Excellence
+                  {t("values.items.excellence.title")}
                 </h3>
                 <p className="text-gray-700 text-lg">
-                  Kami berkomitmen untuk memberikan layanan dengan kualitas
-                  terbaik sesuai ekspektasi klien.
+                  {t("values.items.excellence.description")}
                 </p>
               </div>
             </div>
@@ -95,11 +95,10 @@ export default function Values() {
               </div>
               <div>
                 <h3 className="font-bold text-[#254CD5] text-xl uppercase">
-                  Loyalty
+                  {t("values.items.loyalty.title")}
                 </h3>
                 <p className="text-gray-700 text-lg">
-                  Kami membangun hubungan jangka panjang dengan klien dan mitra
-                  demi dedikasi untuk mencapai tujuan melalui teknologi.
+                  {t("values.items.loyalty.description")}
                 </p>
               </div>
             </div>

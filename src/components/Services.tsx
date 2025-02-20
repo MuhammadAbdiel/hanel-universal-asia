@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export default function Services() {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full">
       {/* Bagian Atas: Background Image + Overlay + Text */}
@@ -15,9 +19,11 @@ export default function Services() {
         >
           <div className="text-center text-white">
             <h2 className="text-xl sm:text-5xl font-bold uppercase mb-4">
-              LAYANAN KAMI
+              {t("services.header.title")}
             </h2>
-            <p className="text-sm sm:text-lg uppercase">HANEL UNIVERSAL ASIA</p>
+            <p className="text-sm sm:text-lg uppercase">
+              {t("services.header.subtitle")}
+            </p>
           </div>
         </div>
       </div>
@@ -31,21 +37,17 @@ export default function Services() {
             data-aos="fade-down"
           >
             <div className="flex justify-center mb-4">
-              {/* <img
-                src="/assets/icon-web.svg"
-                alt="Website Icon"
-                className="w-12 h-12"
-              /> */}
+              {/* Icon atau gambar dapat ditambahkan di sini */}
             </div>
             <h3 className="text-2xl font-bold uppercase mb-10">
-              Pembuatan Website
+              {t("services.cards.website.title")}
             </h3>
             <ul className="text-md space-y-2">
-              <li>Website Perusahaan</li>
-              <li>E-Commerce</li>
-              <li>Website Portofolio</li>
-              <li>Landing Page</li>
-              <li>Sistem Manajemen Konten (CMS)</li>
+              <li>{t("services.cards.website.items.0")}</li>
+              <li>{t("services.cards.website.items.1")}</li>
+              <li>{t("services.cards.website.items.2")}</li>
+              <li>{t("services.cards.website.items.3")}</li>
+              <li>{t("services.cards.website.items.4")}</li>
             </ul>
           </div>
 
@@ -55,20 +57,16 @@ export default function Services() {
             data-aos="fade-down"
           >
             <div className="flex justify-center mb-4">
-              {/* <img
-                src="/assets/icon-app.svg"
-                alt="App Icon"
-                className="w-12 h-12"
-              /> */}
+              {/* Icon atau gambar dapat ditambahkan di sini */}
             </div>
             <h3 className="text-2xl font-bold uppercase mb-10">
-              Pengembangan Aplikasi
+              {t("services.cards.app.title")}
             </h3>
             <ul className="text-md space-y-2">
-              <li>Aplikasi Mobile (Android & iOS)</li>
-              <li>Aplikasi Desktop</li>
-              <li>Aplikasi Berbasis Web</li>
-              <li>Integrasi API dan Sistem</li>
+              <li>{t("services.cards.app.items.0")}</li>
+              <li>{t("services.cards.app.items.1")}</li>
+              <li>{t("services.cards.app.items.2")}</li>
+              <li>{t("services.cards.app.items.3")}</li>
             </ul>
           </div>
 
@@ -78,17 +76,15 @@ export default function Services() {
             data-aos="fade-down"
           >
             <div className="flex justify-center mb-4">
-              {/* <img
-                src="/assets/icon-it.svg"
-                alt="IT Support Icon"
-                className="w-12 h-12"
-              /> */}
+              {/* Icon atau gambar dapat ditambahkan di sini */}
             </div>
-            <h3 className="text-2xl font-bold uppercase mb-10">Dukungan IT</h3>
+            <h3 className="text-2xl font-bold uppercase mb-10">
+              {t("services.cards.itSupport.title")}
+            </h3>
             <ul className="text-md space-y-2">
-              <li>Pemeliharaan Sistem IT</li>
-              <li>Konsultasi IT</li>
-              <li>Digital Marketing</li>
+              <li>{t("services.cards.itSupport.items.0")}</li>
+              <li>{t("services.cards.itSupport.items.1")}</li>
+              <li>{t("services.cards.itSupport.items.2")}</li>
             </ul>
           </div>
         </div>
