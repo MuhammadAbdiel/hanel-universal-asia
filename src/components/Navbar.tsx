@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white backdrop-blur-md fixed top-0 left-0 w-full shadow-md z-50 transition-all duration-300">
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="container mx-auto px-6 lg:px-12 py-2">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img src="/assets/logo.png" alt="logo" width={100} />

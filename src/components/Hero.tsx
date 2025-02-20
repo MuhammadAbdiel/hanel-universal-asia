@@ -6,7 +6,7 @@ export default function Hero() {
         backgroundImage: "url('/assets/background.jpg')",
       }}
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-[#254bd5e2] to-transparent"></div>
+      <div className="absolute inset-0 bg-[#254bd5] opacity-50"></div>
 
       <div
         data-aos="fade-down"
