@@ -11,7 +11,7 @@ export default function WhatsAppButton() {
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 flex items-center space-x-2 bg-transparent text-white px-3 py-2 rounded-full shadow-lg hover:scale-105 transition-transform z-50"
+      className="fixed bottom-6 right-6 flex items-center space-x-2 bg-transparent text-white px-3 py-2 rounded-full transition-transform z-50"
     >
       {/* Label "Contact Us" */}
       <span className="bg-white text-gray-700 text-sm px-3 py-1 rounded-full shadow-md">

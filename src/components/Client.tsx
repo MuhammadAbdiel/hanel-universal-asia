@@ -32,12 +32,8 @@ export default function Client() {
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-center justify-center"
           data-aos="fade-down"
         >
-          <div className="flex justify-center rounded-md">
-            <img
-              src="/assets/oe.png"
-              alt="Object Expression"
-              className="w-32"
-            />
+          <div className="flex justify-center bg-[#1c39a4] h-32 rounded-md">
+            <img src="/assets/oe.png" alt="Object Expression" className="" />
           </div>
           <div className="flex justify-center bg-white h-32 rounded-md">
             <img src="/assets/ihp.jpg" alt="Partnership" className="w-32" />

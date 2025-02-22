@@ -14,7 +14,7 @@ export const Dashboard = () => {
     const fetchStats = async () => {
       try {
         const response = await axios.get(
-          "https://indonesiahalalpartner.com/get_stats.php"
+          "https://haneluniversalasia.com/get_stats.php"
         );
         const data = response.data;
 
