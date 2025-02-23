@@ -302,8 +302,8 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "id", // Bahasa default
-  fallbackLng: "id",
+  lng: "en", // Bahasa default
+  fallbackLng: "en",
   interpolation: {
     escapeValue: false,
   },

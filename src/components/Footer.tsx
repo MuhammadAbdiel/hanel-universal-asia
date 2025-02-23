@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#254CD5] text-white py-6 px-6 sm:px-12 lg:px-32">
+    <footer className="bg-[#254CD5] text-white py-12 px-6 sm:px-12 lg:px-32">
       <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6">
         {/* Alamat */}
         <div className="flex items-start gap-3 max-w-lg">
@@ -21,13 +21,23 @@ export default function Footer() {
         <div className="flex flex-col gap-3 max-md:w-full">
           <div className="flex items-center gap-3">
             <Phone size={20} />
-            <p className="text-sm sm:text-base">0895 1549 9962</p>
+            <a
+              href="https://wa.me/+6289515499962"
+              target="_blank"
+              className="text-sm sm:text-base"
+            >
+              0895 1549 9962
+            </a>
           </div>
           <div className="flex items-center gap-3">
             <Mail size={20} />
-            <p className="text-sm sm:text-base">
+            <a
+              href="mailto:sales@haneluniversalasia.com"
+              target="_blank"
+              className="text-sm sm:text-base"
+            >
               sales@haneluniversalasial.com
-            </p>
+            </a>
           </div>
         </div>
       </div>
