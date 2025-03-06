@@ -26,7 +26,7 @@ export default function Footer() {
               target="_blank"
               className="text-sm sm:text-base"
             >
-              0895 1549 9962
+              +62 895 1549 9962
             </a>
           </div>
           <div className="flex items-center gap-3">
@@ -36,7 +36,7 @@ export default function Footer() {
               target="_blank"
               className="text-sm sm:text-base"
             >
-              sales@haneluniversalasial.com
+              sales@haneluniversalasia.com
             </a>
           </div>
         </div>
